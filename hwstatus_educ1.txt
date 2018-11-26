@@ -1,0 +1,132 @@
+ip-172-31-32-197.eu-west-3.compute.internal
+    description: Computer
+    width: 64 bits
+    capabilities: vsyscall32
+  *-core
+       description: Motherboard
+       physical id: 0
+     *-memory
+          description: System memory
+          physical id: 0
+          size: 1GiB
+     *-cpu
+          product: Intel(R) Xeon(R) CPU E5-2676 v3 @ 2.40GHz
+          vendor: Intel Corp.
+          vendor_id: GenuineIntel
+          physical id: 1
+          bus info: cpu@0
+          width: 64 bits
+          capabilities: fpu fpu_exception wp vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx rdtscp x86-64 constant_tsc rep_good nopl xtopology eagerfpu pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm fsgsbase bmi1 avx2 smep bmi2 erms invpcid xsaveopt
+     *-pci
+          description: Host bridge
+          product: 440FX - 82441FX PMC [Natoma]
+          vendor: Intel Corporation
+          physical id: 100
+          bus info: pci@0000:00:00.0
+          version: 02
+          width: 32 bits
+          clock: 33MHz
+        *-isa
+             description: ISA bridge
+             product: 82371SB PIIX3 ISA [Natoma/Triton II]
+             vendor: Intel Corporation
+             physical id: 1
+             bus info: pci@0000:00:01.0
+             version: 00
+             width: 32 bits
+             clock: 33MHz
+             capabilities: isa bus_master
+             configuration: latency=0
+        *-ide
+             description: IDE interface
+             product: 82371SB PIIX3 IDE [Natoma/Triton II]
+             vendor: Intel Corporation
+             physical id: 1.1
+             bus info: pci@0000:00:01.1
+             version: 00
+             width: 32 bits
+             clock: 33MHz
+             capabilities: ide isa_compatibility_mode-only_controller__supports_bus_mastering bus_master
+             configuration: driver=ata_piix latency=64
+             resources: irq:0 ioport:1f0(size=8) ioport:3f6 ioport:170(size=8) ioport:376 ioport:c100(size=16)
+        *-bridge UNCLAIMED
+             description: Bridge
+             product: 82371AB/EB/MB PIIX4 ACPI
+             vendor: Intel Corporation
+             physical id: 1.3
+             bus info: pci@0000:00:01.3
+             version: 01
+             width: 32 bits
+             clock: 33MHz
+             capabilities: bridge bus_master
+             configuration: latency=0
+        *-display
+             description: VGA compatible controller
+             product: GD 5446
+             vendor: Cirrus Logic
+             physical id: 2
+             bus info: pci@0000:00:02.0
+             version: 00
+             width: 32 bits
+             clock: 33MHz
+             capabilities: vga_controller bus_master rom
+             configuration: driver=cirrus latency=0
+             resources: irq:0 memory:f0000000-f1ffffff memory:f3000000-f3000fff
+        *-generic
+             description: Unassigned class
+             product: Xen Platform Device
+             vendor: XenSource, Inc.
+             physical id: 3
+             bus info: pci@0000:00:03.0
+             version: 01
+             width: 32 bits
+             clock: 33MHz
+             capabilities: bus_master
+             configuration: driver=xen-platform-pci latency=0
+             resources: irq:28 ioport:c000(size=256) memory:f2000000-f2ffffff
+     *-pnp00:00
+          product: PnP device PNP0c02
+          physical id: 2
+          capabilities: pnp
+          configuration: driver=system
+     *-pnp00:01
+          product: PnP device PNP0c02
+          physical id: 3
+          capabilities: pnp
+          configuration: driver=system
+     *-pnp00:02
+          product: PnP device PNP0b00
+          physical id: 4
+          capabilities: pnp
+          configuration: driver=rtc_cmos
+     *-pnp00:03
+          product: PnP device PNP0f13
+          physical id: 5
+          capabilities: pnp
+          configuration: driver=i8042 aux
+     *-pnp00:04
+          product: PnP device PNP0303
+          physical id: 6
+          capabilities: pnp
+          configuration: driver=i8042 kbd
+     *-pnp00:05
+          product: PnP device PNP0700
+          physical id: 7
+          capabilities: pnp
+     *-pnp00:06
+          product: PnP device PNP0501
+          physical id: 8
+          capabilities: pnp
+          configuration: driver=serial
+     *-pnp00:07
+          product: PnP device PNP0c02
+          physical id: 9
+          capabilities: pnp
+          configuration: driver=system
+  *-network
+       description: Ethernet interface
+       physical id: 1
+       logical name: eth0
+       serial: 0e:d4:56:d2:3c:1a
+       capabilities: ethernet physical
+       configuration: broadcast=yes driver=vif ip=172.31.32.197 link=yes multicast=yes
